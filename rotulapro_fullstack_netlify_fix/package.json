@@ -1,0 +1,30 @@
+{
+  "name": "rotulapro-netlify",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node -e \"console.log('RotulaPro: frontend estático + Netlify Functions')\"",
+    "dev": "netlify dev",
+    "start": "netlify dev"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "latest",
+    "bcryptjs": "latest",
+    "cheerio": "latest",
+    "cors": "latest",
+    "express": "latest",
+    "helmet": "latest",
+    "jsonwebtoken": "latest",
+    "openai": "latest",
+    "resend": "latest",
+    "serverless-http": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "netlify-cli": "latest"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RotulaPro</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="auth" class="auth-page">
+    <section class="auth-card">
+      <div class="auth-hero">
+        <div class="logo"><span>RP</span><div><b>RotulaPro</b><small>Cotización + venta + control</small></div></div>
+        <h1>Sistema real para rotulaciones.</h1>
+        <p>Login, registro con aprobación, roles, correo, tasa Euro BCV automática e IA para estimar medidas.</p>
+        <div class="hint">Usuario inicial: <b>Yeiroa2003@gmail.com</b> / <b>admin123</b></div>
+      </div>
+      <div class="auth-form">
+        <div class="tabs"><button id="loginTab" class="active">Entrar</button><button id="registerTab">Registrarse</button></div>
+        <form id="loginForm">
+          <label>Correo</label><input id="loginEmail" type="email" required value="Yeiroa2003@gmail.com" />
+          <label>Contraseña</label><input id="loginPassword" type="password" required value="admin123" />
+          <button>Iniciar sesión</button>
+        </form>
+        <form id="registerForm" class="hide">
+          <label>Nombre</label><input id="regName" required />
+          <label>Teléfono</label><input id="regPhone" />
+          <label>Correo</label><input id="regEmail" type="email" required />
+          <label>Cargo solicitado</label><select id="regRole"><option value="rotulador">Rotulador / Vendedor</option><option value="admin">Administrador</option></select>
+          <label>Contraseña</label><input id="regPassword" type="password" minlength="6" required />
+          <button>Enviar solicitud</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <div id="app" class="app hide">
+    <aside>
+      <div class="logo"><span>RP</span><div><b>RotulaPro</b><small id="roleText"></small></div></div>
+      <nav id="nav"></nav>
+      <button class="ghost" onclick="logout()">Cerrar sesión</button>
+    </aside>
+    <main>
+      <header><h1 id="title">Inicio</h1><p id="subtitle">Panel principal</p></header>
+      <section id="content"></section>
+    </main>
+  </div>
+  <div id="toast" class="toast hide"></div>
+  <script src="app.js"></script>
+</body>
+</html>
